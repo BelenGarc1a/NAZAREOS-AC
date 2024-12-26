@@ -1,0 +1,84 @@
+/* Contenedor del carrusel */
+.slider-container {
+    position: relative;
+    max-width: 100%;
+    margin: 30px auto;
+    text-align: center;
+    overflow: hidden; /* Ocultar contenido fuera del área visible */
+}
+
+/* Carrusel */
+.slider-images {
+    display: flex;
+    transition: transform 1s ease-in-out; /* Transición más lenta */
+}
+
+/* Tarjetas */
+.slider-img {
+    flex: 1 0 18%; /* Mostrar 5 imágenes por fila */
+    box-sizing: border-box;
+    text-align: center;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 10px;
+    position: relative;
+    cursor: pointer;
+}
+
+.slider-img:hover {
+    transform: scale(1.05); /* Agrandamiento al pasar el mouse */
+    transition: transform 0.3s ease; /* Suaviza la animación */
+}
+
+/* Imágenes */
+.slider-img img {
+    width: 100%;
+    height: 150px; /* Tamaño fijo para las imágenes */
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+
+/* Ícono de corazón */
+.slider-img .heart-icon {
+    font-size: 35px; /* Tamaño más grande */
+    color: #999;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.2s ease; /* Suaviza el cambio de color y escala */
+}
+
+.slider-img .heart-icon.active {
+    color: #ff4081; /* Color rosa al estar activo */
+}
+
+.slider-img .heart-icon:hover {
+    transform: scale(1.2); /* Efecto de agrandamiento al pasar el mouse */
+}
+
+/* Indicadores (botones de puntos) */
+.slider-container .dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 10px; /* Espaciado entre puntos */
+    position: relative; /* Asegura que estén bien posicionados */
+    z-index: 10; /* Encima del contenido */
+}
+
+/* Estilo de los botones (puntos) */
+.slider-container .dots button {
+    width: 20px; /* Tamaño más grande */
+    height: 20px;
+    border-radius: 50%;
+    border: none;
+    background: #ccc; /* Color base de los puntos */
+    cursor: pointer;
+    transition: background 0.3s ease; /* Suaviza el cambio de color */
+}
+
+.slider-container .dots button.active {
+    background: #ff4081; /* Color rosa para el punto activo */
+}

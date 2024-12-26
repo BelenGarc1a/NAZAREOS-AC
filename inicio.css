@@ -1,0 +1,128 @@
+/* Contenedor principal */
+*{
+    scroll-behavior: smooth;
+}
+.inicio {
+    display: flex;
+    justify-content: flex-start; /* Recuadro pegado al borde izquierdo */
+    align-items: flex-start; /* Ajusta la posición vertical del recuadro */
+    width: 100%;
+    height: 120vh; /* Altura ajustada al viewport */
+    background-color: #fff; /* Fondo para contraste */
+    position: relative;
+    overflow: hidden;
+    padding-top: 95px; /* Espaciado entre el recuadro y la barra de navegación */
+    
+}
+
+/* Caja de información */
+.info-box {
+    background-color: #C93790; /* Color de fondo del recuadro */
+    color: #fff; /* Color del texto */
+    width: 50%; /* Ajusta el ancho del recuadro */
+    padding: 91px; /* Espaciado interno */
+    border-top-right-radius: 450px; /* Bordes redondeados arriba-derecha */
+    border-bottom-right-radius: 450px; /* Bordes redondeados abajo-derecha */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centro visual */
+    text-align: justify; /* Texto justificado */
+    position: relative;
+    z-index: 2; /* Por encima de la imagen */
+}
+
+/* Cita o frase */
+.frase {
+    font-size: 3.5rem; /* Tamaño más grande */
+    font-family: 'Sacramento', cursive; /* Fuente personalizada */
+    font-weight: normal; /* Sin negritas */
+    line-height: 1; /* Espaciado entre líneas ajustado */
+    margin-bottom: 30px; /* Espaciado inferior */
+    text-align: left; /* Centrado del texto */
+}
+
+.decorative-line {
+    position: absolute; /* Posiciona respecto al contenedor padre */
+    height: 5px;
+    background-color: #E0D543;
+    width: 60%; /* Ajusta el ancho según lo necesario */
+    border-radius: 10px;
+    top: 70%; /* Ajusta para colocar debajo del texto */
+    left: 0; /* Alinea al borde izquierdo del contenedor */
+    transform: translateX(45%);
+}
+
+/* Botón */
+.cta-button {
+    background-color: #E0D543;
+    color: #fff;
+    border: none;
+    border-radius: 60px;
+    padding: 20px 40px; /* Tamaño más grande del botón */
+    font-size: 1.4rem; /* Tamaño del texto del botón ajustado */
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease-in-out;
+    position: relative; /* Habilita el ajuste con 'top' */
+    top: 120px; /* Baja el botón sin afectar al tamaño del recuadro */
+    left: -180px;
+}
+
+.cta-button:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+/* Imagen decorativa */
+.image-decorative {
+    position: absolute;
+    top: 25px; /* Baja la imagen */
+    right: -10%; /* Ajusta la visibilidad de la imagen */
+    width: 60%; /* Ajusta el tamaño de la imagen */
+    height: 103%;
+    
+    z-index: 1; /* Detrás del recuadro */
+    opacity: 0.9; /* Transparencia ligera */
+}
+
+
+/* Contenedor general para los íconos laterales */
+.side-icons {
+    position: fixed; /* Fija la posición respecto a la ventana */
+    left: 10px; /* Márgen izquierdo */
+    bottom: 50px; /* Ajusta la distancia desde la parte inferior de la ventana */
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 1000; /* Asegura que los iconos estén por encima de otros elementos */
+}
+
+.side-icons a img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s;
+}
+
+.side-icons a img:hover {
+    transform: scale(1.1);
+}
+
+/* Flecha para volver al inicio */
+.scroll-to-top {
+    position: fixed; /* Fija la posición respecto a la ventana */
+    right: 10px; /* Márgen derecho */
+    bottom: 50px; /* Distancia desde la parte inferior de la ventana */
+    cursor: pointer;
+    transition: transform 0.3s;
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+}
+
+.scroll-to-top img {
+    width: 50px;
+    height: 50px;
+}
+
+.scroll-to-top:hover img {
+    transform: scale(1.1);
+}

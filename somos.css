@@ -1,0 +1,178 @@
+*{
+    box-sizing: border-box;
+    
+}
+
+
+.somos{
+    width: 100%;
+    
+    overflow: hidden;
+    position: relative;
+
+    
+}
+
+.info {
+    background-color: #C93790; /* Color de fondo del recuadro */
+    color: #fff; /* Color del texto */
+    width: 50%; /* Ajusta el ancho del recuadro */
+    height: 40%;
+    padding: 70px 0 70px 30px; /* Espaciado interno */
+    border-top-right-radius: 450px; /* Bordes redondeados arriba-derecha */
+    border-bottom-right-radius: 450px; /* Bordes redondeados abajo-derecha */
+    display: block; /* Cambiar a bloque para ocupar todo el ancho */
+    text-align: left; /* Alinea el texto para que abarque todo el cuadro */
+    position: relative;
+    z-index: 2; /* Por encima de la imagen */
+    margin-top: 200px;
+    margin-left: 0;
+    
+}
+
+.quienessomos {
+    font-size: 3.6rem; /* Tamaño del título */
+    font-family: 'Poppins', sans-serif; /* Fuente personalizada */
+    font-weight: bold; /* Negritas */
+    line-height: 1; /* Espaciado entre líneas */
+    margin-top: 20px;
+    margin-bottom: 30px; /* Espaciado inferior */
+    text-align: left /* Justifica el título también */
+}
+
+p {
+    font-size: 1.5rem; /* Tamaño del texto */
+    line-height: 1.4; /* Espaciado entre líneas */
+    margin: 0; /* Elimina márgenes superiores e inferiores */
+    text-align:left; /* Justificación completa del párrafo */
+    margin-top: 55px;
+
+}
+
+.line {
+    position: absolute; /* Posiciona respecto al contenedor padre */
+    height: 5px;
+    background-color: #E0D543;
+    width: 50%; /* Ajusta el ancho según lo necesario */
+    border-radius: 10px;
+    top: 35%; /* Ajusta para colocar debajo del texto */
+    left: 0; /* Alinea al borde izquierdo del contenedor */
+    transform: translateX(20%);
+}
+.imagen{
+    position: absolute;
+    top: 25px; /* Baja la imagen */
+    right: -10%; /* Ajusta la visibilidad de la imagen */
+    width: 60%; /* Ajusta el tamaño de la imagen */
+    height: 103%;
+    
+    z-index: 1; /* Detrás del recuadro */
+    opacity: 0.9; /* Transparencia ligera */
+}
+
+/* Botón */
+.button {
+    background-color: #E0D543;
+    color: #fff;
+    border: none;
+    border-radius: 60px;
+    padding: 20px 38px; /* Tamaño más grande del botón */
+    font-size: 1.4rem; /* Tamaño del texto del botón ajustado */
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease-in-out;
+    position: relative; /* Habilita el ajuste con 'top' */
+    top: 70px; /* Baja el botón sin afectar al tamaño del recuadro */
+    left: 10px;
+}
+.mision-vision {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 50px;
+    background-color: #fff; /* Fondo claro */
+    position: relative;
+}
+
+
+.circle {
+    width: 400px; /* Tamaño del círculo */
+    height: 400px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distribuye el contenido uniformemente */
+    align-items: center; /* Centra horizontalmente */
+    text-align: center; /* Texto alineado al centro */
+    padding: 30px; /* Espaciado interno */
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden; /* Evita que el texto salga del círculo */
+    margin-top: 55px;
+}
+
+.circle h2 {
+    font-size: 2.5rem; /* Ajusta el tamaño del título */
+    margin: 0; /* Elimina márgenes */
+    position: absolute;
+    top: 20px; /* Coloca el título en la parte superior */
+    font-family: 'Poppins', sans-serif;
+}
+
+.circle p {
+    font-size: 1.1rem; /* Tamaño del texto del párrafo */
+    line-height: 1.5; /* Espaciado entre líneas */
+    margin: 0; /* Elimina márgenes */
+    flex: 1; /* Permite que el texto ocupe el espacio central */
+    display: flex;
+    align-items: center; /* Centra verticalmente el texto */
+    text-align: justify; /* Centra horizontalmente el texto */
+    padding: 10px;
+}
+
+.circle button {
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'Poppins';
+    font-size: 1rem;
+    position: absolute;
+    bottom: 20px; /* Coloca el botón en la parte inferior */
+    left: 50%; /* Centra horizontalmente */
+    transform: translateX(-50%); /* Ajusta para centrar */
+    transition: background-color 0.3s;
+}
+
+.circle-button:hover {
+    background-color: #fff;
+    color: #000;
+}
+.circle.pink {
+    background-color: #c93790; /* Color rosa */
+}
+
+.circle.blue {
+    background-color: #3b79b7; /* Color azul */
+}
+.logo2 {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: -10px;
+    top: 140px;
+}
+
+.logo2 img {
+    width: 220px; /* Tamaño del logo */
+    height: auto;
+    margin-top: 100px;
+}

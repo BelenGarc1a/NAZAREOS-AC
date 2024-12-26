@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Contenedor del header */
+header {
+    background-color: #d35ea6; /* Color morado */
+    padding: 10px 20px; /* Espaciado interno */
+    margin-top: 40px;
+    height: 4rem;
+    display: flex; /* Asegura la alineación de elementos */
+    align-items: center; /* Centrado vertical */
+    justify-content: center; /* Centrado horizontal */
+    position: relative; /* Contexto para la imagen */
+    overflow: visible; /* Permitir contenido fuera del header */
+}
+
+/* Contenedor de los elementos del header */
+.header-container {
+    display: flex;
+    align-items: center; /* Alineación vertical */
+    justify-content: space-between; /* Espaciado uniforme */
+    position: relative;
+    width: 100%;
+}
+
+/* Logo */
+.logo {
+    height: 150px; /* Tamaño inicial */
+    width: auto; /* Mantener proporción */
+    transition: transform 0.3s ease-in-out;
+    position: absolute; /* Superponer al resto del contenido */
+    left: 20px; /* Ajusta la posición horizontal */
+    z-index: 10; /* Al frente de otros elementos */
+}
+
+/* Efecto de hover para agrandar la imagen */
+.logo:hover {
+    transform: scale(1.1); /* Aumentar tamaño del logo */
+}
+
+/* Navegación */
+nav {
+    display: flex;
+    align-items: center; /* Centrar verticalmente */
+    gap: 30px; /* Espaciado entre enlaces */
+    margin-left: auto; /* Mantener centrado y desplazado hacia la derecha */
+}
+
+/* Enlaces del menú */
+nav a {
+    text-decoration: none;
+    font-size: 1.2em; /* Tamaño de fuente */
+    font-weight: 600;
+    color: #000; /* Color del texto */
+    padding: 10px 20px; /* Espaciado interno */
+    background-color: transparent; /* Fondo transparente */
+    border-radius: 8px; /* Bordes redondeados */
+    transition: all 0.3s ease-in-out; /* Animación suave */
+}
+
+/* Animación tipo botón al hacer hover */
+nav a:hover {
+    background-color: #a53692; /* Fondo amarillo al pasar el cursor */
+    color: #ffffff; /* Cambiar texto a negro */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Efecto de sombra */
+}
+
+/* Media Query para pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+    /* Ajustar tamaño del logo en dispositivos móviles */
+    .logo {
+        height: 100px;
+    }
+
+    /* Cambiar la disposición del contenedor header */
+    .header-container {
+        flex-direction: column; /* Pone los elementos en columna */
+        align-items: center;
+        gap: 10px;
+    }
+
+    /* Reducir el tamaño de la fuente en la navegación */
+    nav a {
+        font-size: 1em; /* Fuente más pequeña */
+        padding: 8px 15px; /* Ajuste del espaciado interno */
+    }
+
+    /* Cambiar la disposición del menú en dispositivos pequeños */
+    nav {
+        flex-direction: column; /* Pone los enlaces en columna */
+        gap: 15px; /* Espaciado más grande entre los enlaces */
+        margin-left: 0;
+    }
+}
+
